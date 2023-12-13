@@ -1,9 +1,66 @@
 body {
-   background-image: url('/Website/images/background.png');
-    margin: 0; /* Entfernt den Standard-Abstand um den Rand */
-    height: 100%;
-    background-position: center center; /* Zentriert das Bild */
-    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-    background-attachment: fixed; /* Hält das Bild beim Scrollen fest */
-    background-size: cover; /* Streckt das Bild, sodass es den gesamten verfügbaren Platz bedeckt */
-  }
+  background-image: url('/Website/images/background.png');
+  margin: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.centered-div {
+  width: 50%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: #214253;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+    
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.drag-drop {
+  width: 100%; 
+  padding: 20px;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #214253;
+  color: white;
+}
+
+.drag-drop.dragover {
+  border-color: #aaa;
+}
+
+.image-preview {
+  margin-top: 20px;
+  max-height: 100px;
+  width: auto;
+}
+
+#image-info {
+  margin-top: 5px;
+  color: white;
+}
+
+#submit-button {
+  height: 50px;
+  width: 100%;
+  background-color: #045987;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #03476b;
+}
