@@ -9,6 +9,5 @@
 	4. Sobald zweiter S3 ein neues Bild bekommt, wird dieses direkt wieder zurückgegeben
 3. Bild wird heruntergeladen
 
-
 ## Herr Frueh vorbereiten vor testen
 ... 
