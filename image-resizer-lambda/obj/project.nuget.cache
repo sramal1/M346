@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zclzRoO5RjiSr9Q8QWp0vXn1KSueDuPzxDa1L06hU35JboIxdI4WSIRof16DDUjGQgArtY1N4ctF3mPpDFLxuw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\image-resizer-lambda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\manue\\.nuget\\packages\\amazon.lambda.core\\2.2.0\\amazon.lambda.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.4.0\\amazon.lambda.serialization.systemtextjson.2.4.0.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.23\\microsoft.netcore.app.crossgen2.win-x64.6.0.23.nupkg.sha512"
+  ],
+  "logs": []
+}
