@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
    //AWS CONFIGURE
    AWS.config.update({
-      region: 'Ihre-Region', // Ersetzen Sie dies durch Ihre Region
+      region: 'us-east-1', // Ersetzen Sie dies durch Ihre Region
       credentials: new AWS.CognitoIdentityCredentials({
          IdentityPoolId: 'Ihr-Identity-Pool-Id' // Ersetzen Sie dies durch Ihren Identity Pool ID
       })
@@ -15,12 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
    var s3 = new AWS.S3({
       apiVersion: '2006-03-01'
    });
-
-
-   function triggerChangeEvent(element) {
-      var event = new Event("change");
-      element.dispatchEvent(event);
-   }
 
    fileUpload.addEventListener("change", function (event) {
       var file = fileUpload.files[0];
@@ -61,11 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
             Body: file
          };
 
+         function downloadImage(imageUrl) {
+            // Erstellen eines temporären 'a'-Tags
+            var downloadLink = document.createElement("a");
+            downloadLink.href = imageUrl;
+            downloadLink.download = "DownloadedImage.png"; // Sie können den Dateinamen anpassen
+
+            // Hinzufügen des Links zum Dokument und Auslösen des Klicks
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+
+            // Entfernen des Links nach dem Download
+            document.body.removeChild(downloadLink);
+         }
+
          s3.upload(uploadParams, function (err, data) {
             if (err) {
                console.log("Error", err);
             } if (data) {
                console.log("Upload Success", data.Location);
+               // Hier Lambda-Funktion aufrufen
+               invokeLambdaFunction(data.Location, function (response) {
+                  // Automatischer Download des verarbeiteten Bildes
+                  downloadImage(response.processedImageUrl);
+               });
             }
          });
       }
