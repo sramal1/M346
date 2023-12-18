@@ -1,6 +1,0 @@
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\image-resizer-lambda.deps.json
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\image-resizer-lambda.runtimeconfig.json
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\image-resizer-lambda.pdb
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\Amazon.Lambda.Core.dll
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
-C:\Users\manue\source\repos\M346\image-resizer-lambda\bin\Release\net6.0\publish\image-resizer-lambda.dll

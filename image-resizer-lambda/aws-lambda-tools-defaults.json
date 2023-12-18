@@ -14,3 +14,4 @@
   "function-timeout": 30,
   "function-handler": "image-resizer-lambda::image_resizer_lambda.Function::FunctionHandler"
 }
+
