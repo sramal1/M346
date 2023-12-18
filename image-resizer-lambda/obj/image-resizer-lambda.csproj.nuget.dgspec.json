@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\image-resizer-lambda.csproj": {}
+    "C:\\Users\\manue\\source\\repos\\M346\\image-resizer-lambda\\image-resizer-lambda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\image-resizer-lambda.csproj": {
+    "C:\\Users\\manue\\source\\repos\\M346\\image-resizer-lambda\\image-resizer-lambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\image-resizer-lambda.csproj",
+        "projectUniqueName": "C:\\Users\\manue\\source\\repos\\M346\\image-resizer-lambda\\image-resizer-lambda.csproj",
         "projectName": "image-resizer-lambda",
-        "projectPath": "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\image-resizer-lambda.csproj",
+        "projectPath": "C:\\Users\\manue\\source\\repos\\M346\\image-resizer-lambda\\image-resizer-lambda.csproj",
         "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manue\\source\\repos\\image-resizer-lambda\\obj\\",
+        "outputPath": "C:\\Users\\manue\\source\\repos\\M346\\image-resizer-lambda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,7 +62,15 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[6.0.23, 6.0.23]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[6.0.23, 6.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
               "version": "[6.0.23, 6.0.23]"
             }
           ],
@@ -72,6 +80,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
