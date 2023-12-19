@@ -4,6 +4,8 @@ using Amazon.S3.Model;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Processing;
+using System.IO;
+using System.Threading.Tasks;
 
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 
@@ -14,32 +16,51 @@ namespace image_resizer_lambda
         private readonly IAmazonS3 _s3Client;
         private const string BucketName = "mabu-bucket-original";
         private const string BucketNameResized = "mabu-bucket-resized";
-        private const string ObjectKey = "xu-haiwei-S3LL_LPcrcw-unsplash.png";
 
         public Function()
         {
             _s3Client = new AmazonS3Client();
         }
 
-        public async Task<string> FunctionHandler(ILambdaContext context)
+        public async Task FunctionHandler(ILambdaContext context)
         {
-            var getObjectResponse = await GetObject();
-            var resizedStream = ResizeImage(getObjectResponse.ResponseStream);
+            var listObjectsResponse = await ListObjects();
 
-            await UploadObject(resizedStream);
-            return $"https://s3.amazonaws.com/{BucketName}/resized";
+            foreach (var s3Object in listObjectsResponse.S3Objects)
+            {
+                context.Logger.Log($"START Task: Resize {s3Object.Key}");
+                var getObjectResponse = await GetObject(s3Object.Key);
+                var resizedStream = ResizeImage(getObjectResponse.ResponseStream);
+                await UploadObject(resizedStream, s3Object.Key);
+                context.Logger.Log($"FINISHED: Task Resize {s3Object.Key}");
+            }
+        }
+
+        /// <summary>
+        /// Lists all objects in an Amazon S3 bucket.
+        /// </summary>
+        /// <returns>A Task with the asynchronous operation, returning the ListObjectsResponse.</returns>
+        async Task<ListObjectsResponse> ListObjects()
+        {
+            var listObjectsRequest = new ListObjectsRequest
+            {
+                BucketName = BucketName
+            };
+
+            return await _s3Client.ListObjectsAsync(listObjectsRequest);
         }
 
         /// <summary>
         /// Gets an object from an Amazon S3 bucket.
         /// </summary>
+        /// <param name="objectKey">The key of the object to retrieve.</param>
         /// <returns>A Task with the asynchronous operation, returning the GetObjectResponse.</returns>
-        async Task<GetObjectResponse> GetObject()
+        async Task<GetObjectResponse> GetObject(string objectKey)
         {
             var getObjectRequest = new GetObjectRequest
             {
                 BucketName = BucketName,
-                Key = ObjectKey
+                Key = objectKey
             };
 
             return await _s3Client.GetObjectAsync(getObjectRequest);
@@ -49,15 +70,17 @@ namespace image_resizer_lambda
         /// Uploads an object to an Amazon S3 bucket using an image stream.
         /// </summary>
         /// <param name="imgStream">The MemoryStream containing the image to be uploaded.</param>
+        /// <param name="objectKey">The key for the resized object in the destination bucket.</param>
         /// <returns>A Task with the asynchronous operation.</returns>
-        async Task UploadObject(MemoryStream imgStream)
+        async Task UploadObject(MemoryStream imgStream, string objectKey)
         {
             var putObjectRequest = new PutObjectRequest
             {
                 BucketName = BucketNameResized,
-                Key = "resized",
+                Key = objectKey,
                 InputStream = imgStream
             };
+
             await _s3Client.PutObjectAsync(putObjectRequest);
         }
 
