@@ -4,8 +4,6 @@ using Amazon.S3.Model;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Processing;
-using System.IO;
-using System.Threading.Tasks;
 
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 
@@ -32,7 +30,7 @@ namespace image_resizer_lambda
                 var getObjectResponse = await GetObject(s3Object.Key);
                 var resizedStream = ResizeImage(getObjectResponse.ResponseStream);
                 await UploadObject(resizedStream, s3Object.Key);
-                //await DeleteObject(s3Object.Key);
+                await DeleteObject(s3Object.Key);
                 context.Logger.Log($"FINISHED: Resize {s3Object.Key}");
             }
         }
