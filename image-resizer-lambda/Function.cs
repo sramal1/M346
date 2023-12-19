@@ -28,11 +28,12 @@ namespace image_resizer_lambda
 
             foreach (var s3Object in listObjectsResponse.S3Objects)
             {
-                context.Logger.Log($"START Task: Resize {s3Object.Key}");
+                context.Logger.Log($"START: Resize {s3Object.Key}");
                 var getObjectResponse = await GetObject(s3Object.Key);
                 var resizedStream = ResizeImage(getObjectResponse.ResponseStream);
                 await UploadObject(resizedStream, s3Object.Key);
-                context.Logger.Log($"FINISHED: Task Resize {s3Object.Key}");
+                //await DeleteObject(s3Object.Key);
+                context.Logger.Log($"FINISHED: Resize {s3Object.Key}");
             }
         }
 
@@ -83,6 +84,25 @@ namespace image_resizer_lambda
 
             await _s3Client.PutObjectAsync(putObjectRequest);
         }
+
+        /// <summary>
+        /// Ddeletes an object from an S3 bucket.
+        /// </summary>
+        /// <param name="key">The key of the object to be deleted.</param>
+        /// <returns>>A Task with the asynchronous operation.</returns>
+        async Task DeleteObject(string key)
+        {
+            // Create a DeleteObjectRequest specifying the BucketName and Key of the object to be deleted.
+            var deleteObjectRequest = new DeleteObjectRequest
+            {
+                BucketName = BucketName,
+                Key = key,
+            };
+
+            // Asynchronously invoke the DeleteObject operation using the Amazon S3 client.
+            await _s3Client.DeleteObjectAsync(deleteObjectRequest);
+        }
+
 
         /// <summary>
         /// Resizes an image stream using Lanczos3 resampling.
