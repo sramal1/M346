@@ -88,20 +88,18 @@ namespace image_resizer_lambda
         }
 
         /// <summary>
-        /// Ddeletes an object from an S3 bucket.
+        /// Deletes an object from an S3 bucket.
         /// </summary>
         /// <param name="key">The key of the object to be deleted.</param>
         /// <returns>>A Task with the asynchronous operation.</returns>
         async Task DeleteObject(string key)
         {
-            // Create a DeleteObjectRequest specifying the BucketName and Key of the object to be deleted.
             var deleteObjectRequest = new DeleteObjectRequest
             {
                 BucketName = BucketName,
                 Key = key,
             };
 
-            // Asynchronously invoke the DeleteObject operation using the Amazon S3 client.
             await _s3Client.DeleteObjectAsync(deleteObjectRequest);
         }
 

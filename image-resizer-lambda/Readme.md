@@ -1,3 +1,5 @@
+HINWEIS: Dieses Read.Me muss nur beachtet werden, wenn die Funktion bearbeitet wird. 
+
 # AWS Lambda Empty Function Project
 
 This starter project consists of:
