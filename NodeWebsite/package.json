@@ -1,11 +1,14 @@
 {
-  "name": "test",
+  "name": "m346",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website to upload image to aws bucket",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "app.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Livio Doerig",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

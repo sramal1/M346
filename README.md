@@ -12,8 +12,6 @@
 ## Herr Frueh vorbereiten vor testen
 ... 
 
-
-
 ## Reflexion
 
 ### Raphael Hilti
