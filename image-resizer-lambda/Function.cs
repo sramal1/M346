@@ -26,10 +26,14 @@ namespace image_resizer_lambda
 
             foreach (var s3Object in listObjectsResponse.S3Objects)
             {
+                var keySplit = s3Object.Key.Split('_');
+                var resizePercentage = int.Parse(keySplit[0]);
+                var filename = keySplit[1];
+
                 context.Logger.Log($"START: Resize {s3Object.Key}");
                 var getObjectResponse = await GetObject(s3Object.Key);
-                var resizedStream = ResizeImage(getObjectResponse.ResponseStream);
-                await UploadObject(resizedStream, s3Object.Key);
+                var resizedStream = ResizeImage(getObjectResponse.ResponseStream, resizePercentage);
+                await UploadObject(resizedStream, filename);
                 await DeleteObject(s3Object.Key);
                 context.Logger.Log($"FINISHED: Resize {s3Object.Key}");
             }
@@ -101,18 +105,18 @@ namespace image_resizer_lambda
             await _s3Client.DeleteObjectAsync(deleteObjectRequest);
         }
 
-
         /// <summary>
         /// Resizes an image stream using Lanczos3 resampling.
         /// </summary>
         /// <param name="imgStream">The input image stream to be resized.</param>
+        /// <param name="resizePercentage">The percentage by which the image will be reduced in size</param>
         /// <returns>The resized MemoryStream with the image.</returns>
-        static MemoryStream ResizeImage(Stream imgStream)
+        static MemoryStream ResizeImage(Stream imgStream, int resizePercentage)
         {
             using (var img = Image.Load(imgStream))
             {
-                var width = img.Width / 2;
-                var height = img.Height / 2;
+                var width = img.Width / 100 * resizePercentage;
+                var height = img.Height / 100 * resizePercentage;
 
                 img.Mutate(x => x.Resize(width, height, KnownResamplers.Lanczos3)); // Resampler can be changed
 
