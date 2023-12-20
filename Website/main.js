@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
    var submitButton = document.getElementById("submit-button");
    var previewContainer = document.getElementById("image-preview");
 
-   var s3 = new AWS.S3({
-      apiVersion: '2006-03-01'
-   });
+   var AWS = require('aws-sdk');
+   var s3 = new AWS.S3();
 
    fileUpload.addEventListener("change", function (event) {
       var file = fileUpload.files[0];
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Erstellen eines temporären 'a'-Tags
             var downloadLink = document.createElement("a");
             downloadLink.href = imageUrl;
-            downloadLink.download = "DownloadedImage.png"; // Sie können den Dateinamen anpassen
+            downloadLink.download = "DownloadedImage.png";
 
             // Hinzufügen des Links zum Dokument und Auslösen des Klicks
             document.body.appendChild(downloadLink);
@@ -67,16 +66,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.removeChild(downloadLink);
          }
 
-         s3.upload(uploadParams, function (err, data) {
+         s3.putObject(uploadParams, function(err, data) {
             if (err) {
-               console.log("Error", err);
-            } if (data) {
-               console.log("Upload Success", data.Location);
-               // Hier Lambda-Funktion aufrufen
-               invokeLambdaFunction(data.Location, function (response) {
-                  // Automatischer Download des verarbeiteten Bildes
-                  downloadImage(response.processedImageUrl);
-               });
+              console.log(err);
+            } else {
+              console.log('Successfully uploaded image to S3');
             }
          });
       }

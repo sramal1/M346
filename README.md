@@ -11,3 +11,15 @@
 
 ## Herr Frueh vorbereiten vor testen
 ... 
+
+
+
+## Reflexion
+
+### Raphael Hilti
+
+### Livio Dörig
+
+### Manuel Bühler
+
+### Leotrim Ramadani
