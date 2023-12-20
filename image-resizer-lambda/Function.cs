@@ -12,8 +12,8 @@ namespace image_resizer_lambda
     public class Function
     {
         private readonly IAmazonS3 _s3Client;
-        private const string BucketName = "mabu-bucket-original";
-        private const string BucketNameResized = "mabu-bucket-resized";
+        private const string BucketName = "original-image-bucket-m346";
+        private const string BucketNameResized = "resize-image-bucket-m346";
 
         public Function()
         {
