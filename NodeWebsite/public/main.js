@@ -22,27 +22,37 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 
    submitButton.addEventListener("click", function (event) {
-       event.preventDefault();
-       if (fileUpload.files.length === 0) {
-           alert("Bitte wählen Sie zuerst eine Datei aus!");
-       } else {
-           var formData = new FormData();
-           var file = fileUpload.files[0];
-           formData.append("image", file);
-           formData.append("scale", document.getElementById('scale-select').value);
-
-           fetch('/upload', {
-               method: 'POST',
-               body: formData
-           })
-           .then(response => response.json())
-           .then(data => {
-               console.log(data);
-               // Hier könnten Sie beispielsweise eine Nachricht anzeigen, dass das Bild erfolgreich hochgeladen wurde.
-           })
-           .catch(error => {
-               console.log('Fehler beim Hochladen:', error);
-           });
-       }
-   });
+      event.preventDefault();
+      if (fileUpload.files.length === 0) {
+          alert("Bitte wählen Sie zuerst eine Datei aus!");
+      } else {
+          var file = fileUpload.files[0];
+          var scaleValue = document.getElementById('scale-select').value;
+  
+          // Berechne den Skalierungsfaktor und erstelle den neuen Dateinamen
+          var scaleNumber = parseInt(scaleValue * 100);
+          var newFileName = scaleNumber + "_" + file.name;
+  
+          // Erstelle einen neuen Blob, der das Bild repräsentiert
+          var blob = file.slice(0, file.size, file.type); 
+          var newFile = new File([blob], newFileName, { type: file.type });
+  
+          // Füge das Bild mit dem neuen Dateinamen zu FormData hinzu
+          var formData = new FormData();
+          formData.append("image", newFile);
+  
+          fetch('/upload', {
+              method: 'POST',
+              body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log(data);
+          })
+          .catch(error => {
+              console.log('Fehler beim Hochladen:', error);
+          });
+      }
+  });
+  
 });
