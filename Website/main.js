@@ -3,15 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
    var submitButton = document.getElementById("submit-button");
    var previewContainer = document.getElementById("image-preview");
 
-
-   //AWS CONFIGURE
-   AWS.config.update({
-      region: 'us-east-1', // Ersetzen Sie dies durch Ihre Region
-      credentials: new AWS.CognitoIdentityCredentials({
-         IdentityPoolId: 'Ihr-Identity-Pool-Id' // Ersetzen Sie dies durch Ihren Identity Pool ID
-      })
-   });
-
    var s3 = new AWS.S3({
       apiVersion: '2006-03-01'
    });
@@ -47,8 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
          var file = fileUpload.files[0];
          var scaleValue = document.getElementById('scale-select').value;
-         var fileName = scaleValue * 100;
-         console.log(fileName);
+         var scaleNumber = scaleValue * 100;
+         var originalFileName = file.name;
+ 
+         // Generierung des neuen Dateinamens
+         var newFileName = scaleNumber + "_" + originalFileName;
+         console.log(newFileName);
+
+         var newFileName = scaleNumber + "_" + originalFileName;
+         console.log(newFileName);
          var uploadParams = {
             Bucket: 'Ihr-Bucket-Name', // Ersetzen Sie dies durch Ihren Bucket-Namen
             Key: fileName + ".png",
