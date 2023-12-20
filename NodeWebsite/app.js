@@ -3,10 +3,10 @@ const multer = require('multer');
 const AWS = require('aws-sdk');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
-
 
 const s3 = new AWS.S3();
 
