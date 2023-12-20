@@ -5,6 +5,12 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+AWS.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.REGION
+});
+
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
@@ -17,7 +23,7 @@ app.post('/upload', upload.single('image'), function (req, res) {
   const fileContent = fs.readFileSync(file.path);
 
   const uploadParams = {
-    Bucket: 'DEIN_S3_BUCKET_NAME',
+    Bucket: 'original-image-bucket',
     Key: path.basename(file.originalname),
     Body: fileContent
   };
