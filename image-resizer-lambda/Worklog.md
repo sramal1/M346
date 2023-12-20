@@ -38,6 +38,9 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/example_s3_DeleteObject_se
 - ListObjects anhand von den Beispielen auf AWS Dokumentation umgesetzt:
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/example_s3_ListObjects_section.html
 
+-put-bucket-notification-configuration
+https://docs.aws.amazon.com/cli/latest/reference/s3api/put-bucket-notification-configuration.html
+
 
 # Verwendete Tools:
 - AWSToolkitPackage.v17
