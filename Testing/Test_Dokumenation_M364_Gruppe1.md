@@ -6,10 +6,10 @@ Verkleinerungsgrad: 50%
 erwartete Bildgroesse: 250p x 250p
 
 hochgeladenes Bild:
-![hochgeladenes Bild von Test1](/Pictures/Testing1/50_Test1_500x500.png)
+![hochgeladenes Bild von Test1](Pictures/Testing1/50_Test1_500x500.png)
 
 zurueckkommendes Bild
-![zurueckkommendes Bild von Test1](/Pictures/Testing1/Test1.png)
+![zurueckkommendes Bild von Test1](Pictures/Testing1/Test1.png)
 
 Resultat:
 Der Test hat das Bild wie erwartet auf 250p x 250p verkleinert.
