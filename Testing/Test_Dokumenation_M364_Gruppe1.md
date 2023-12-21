@@ -6,12 +6,12 @@
 | 500p x 500p            | 50%                | 250p x 250p           |
 
 
-hochgeladenes Bild:
---
+### hochgeladenes Bild:
+
 ![hochgeladenes Bild von Test1](Pictures/Testing1/50_Test1_500x500.png)
 
-zurueckkommendes Bild:
---
+### zurueckkommendes Bild:
+
 ![zurueckkommendes Bild von Test1](Pictures/Testing1/Test1.png)
 
 Resultat:
