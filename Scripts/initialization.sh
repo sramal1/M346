@@ -40,6 +40,7 @@ aws lambda add-permission --function-name $functionName --profile default \
  --source-arn "arn:aws:s3:::$bucketName1" \
  --source-account $ARN
 
+
 aws s3api put-bucket-notification-configuration --bucket $bucketName1 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionName'","Events": ["s3:ObjectCreated:Put"]}]}'
 
 #cd ../NodeWebsite
