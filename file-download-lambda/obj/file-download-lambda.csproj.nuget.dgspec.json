@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manue\\source\\repos\\file-download-lambda\\file-download-lambda.csproj": {}
+    "C:\\Users\\manue\\source\\repos\\M346\\file-download-lambda\\file-download-lambda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manue\\source\\repos\\file-download-lambda\\file-download-lambda.csproj": {
+    "C:\\Users\\manue\\source\\repos\\M346\\file-download-lambda\\file-download-lambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manue\\source\\repos\\file-download-lambda\\file-download-lambda.csproj",
+        "projectUniqueName": "C:\\Users\\manue\\source\\repos\\M346\\file-download-lambda\\file-download-lambda.csproj",
         "projectName": "file-download-lambda",
-        "projectPath": "C:\\Users\\manue\\source\\repos\\file-download-lambda\\file-download-lambda.csproj",
+        "projectPath": "C:\\Users\\manue\\source\\repos\\M346\\file-download-lambda\\file-download-lambda.csproj",
         "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manue\\source\\repos\\file-download-lambda\\obj\\",
+        "outputPath": "C:\\Users\\manue\\source\\repos\\M346\\file-download-lambda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",

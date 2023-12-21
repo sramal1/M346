@@ -21,10 +21,12 @@ public class Function
     {
         var listObjectResponse = await ListObjects();
 
+        var homeDirectory = Environment.GetEnvironmentVariable("HOME");
+
         foreach (var s3Object in listObjectResponse.S3Objects)
         {
             context.Logger.Log($"START: Download {s3Object.Key}");
-            await DownloadObject(s3Object.Key);
+            await DownloadObject(s3Object.Key, homeDirectory);
             await DeleteObject(s3Object.Key);
             context.Logger.Log($"FINISHED: Download {s3Object.Key}");
         }
@@ -64,23 +66,20 @@ public class Function
     /// Download an object from an Amazon S3 bucket.
     /// </summary>
     /// <param name="objectKey">The key of the object to downlaod.</param>
-    async Task DownloadObject(string objectKey)
+    async Task DownloadObject(string objectKey, string homeDirectory)
     {
         var getObjectRequest = new GetObjectRequest
         {
             BucketName = BucketNameResized,
             Key = objectKey
         };
-
-        var downloadPath = $"/home/user/Downloads/{objectKey}";
+        var downloadPath = Path.Combine(homeDirectory, "Downloads", objectKey);
 
         using (var response = await _s3Client.GetObjectAsync(getObjectRequest))
+        using (var fileStream = File.Create(downloadPath))
         {
-            using (var fileStream = File.Create(downloadPath))
-            {
-                response.ResponseStream.CopyTo(fileStream);
-                fileStream.Close();
-            }
+            response.ResponseStream.CopyTo(fileStream);
+            fileStream.Close();
         }
     }
 }
