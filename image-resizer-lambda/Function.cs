@@ -1,3 +1,8 @@
+// Cloud Projekt Arbeit
+// Gruppe: Livio, Manuel, Raphael, Leotrim
+
+// Lambda-Funktion
+
 using Amazon.Lambda.Core;
 using Amazon.S3;
 using Amazon.S3.Model;
