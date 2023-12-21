@@ -81,7 +81,8 @@ namespace image_resizer_lambda
             {
                 BucketName = BucketNameResized,
                 Key = objectKey,
-                InputStream = imgStream
+                InputStream = imgStream,
+                CannedACL = S3CannedACL.PublicRead
             };
 
             await _s3Client.PutObjectAsync(putObjectRequest);
