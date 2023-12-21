@@ -8,6 +8,7 @@
 bucketName1='original-image-bucket-m346'
 bucketName2='resize-image-bucket-m346'
 functionName='image-resizer-lambda'
+functionNameDownload='file-download-lambda'
 ARN=$(aws sts get-caller-identity --query "Account" --output text)
 
 echo $ARN
@@ -38,6 +39,22 @@ aws lambda add-permission --function-name $functionName --profile default \
  --action "lambda:InvokeFunction" \
  --principal s3.amazonaws.com \
  --source-arn "arn:aws:s3:::$bucketName1" \
+ --source-account $ARN
+
+
+aws s3api put-bucket-notification-configuration --bucket $bucketName2 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionNameDownload'","Events": ["s3:ObjectCreated:Put"]}]}'
+
+cd ../image-resizer-lambda
+
+dotnet lambda delete-function $functionNameDownload
+
+dotnet lambda deploy-function --function-role LabRole $functionNameDownload
+
+aws lambda add-permission --function-name $functionNameDownload --profile default \
+ --statement-id AllowToBeInvoked \
+ --action "lambda:InvokeFunction" \
+ --principal s3.amazonaws.com \
+ --source-arn "arn:aws:s3:::$bucketName2" \
  --source-account $ARN
 
 
