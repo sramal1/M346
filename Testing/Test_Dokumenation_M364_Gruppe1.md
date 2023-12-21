@@ -14,6 +14,8 @@ zurueckkommendes Bild
 Resultat:
 Der Test hat das Bild wie erwartet auf 250p x 250p verkleinert.
 
+Duchgefuehrt am 21.12.2023 10:04
+
 
 ## Test 2
 Bildgroesse: 427p x 640p
@@ -28,6 +30,8 @@ zurueckkommendes Bild
 
 Resultat:
 Der Test hat das Bild nicht wie erwartet auf 213.5p x 320p verkleinert. Es hat das Bild auf 200p x 300p verkleinert.
+
+Duchgefuehrt am 21.12.2023 10:16
 
 
 ## Test 3
@@ -44,6 +48,8 @@ zurueckkommendes Bild
 Resultat:
 Das Bild wurde wie erwartet auf 125p x 125p verkleinert.
 
+Duchgefuehrt am 21.12.2023 10:22
+
 
 ## Test 4
 Speziell: Wir wollte wissen, ob unsere Lambda auch andere Formate als png verkleinern kann, daher haben wir noch ein jpg file verkleinert.
@@ -59,3 +65,11 @@ zurueckkommendes Bild
 
 Resultat:
 Der Test hat das Bild nicht wie erwartet auf 480p x 358.5p verkleinert. Es hat das Bild auf 450p x 300p verkleinert.
+
+Duchgefuehrt am 21.12.2023 10:32
+
+
+
+
+
+Tests wurden alle von der Gruppe1 durchgefuehrt.
