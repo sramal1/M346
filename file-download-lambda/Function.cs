@@ -73,7 +73,10 @@ public class Function
             BucketName = BucketNameResized,
             Key = objectKey
         };
-        var downloadPath = Path.Combine(homeDirectory, "Downloads", objectKey);
+
+
+        //var downloadPath = Path.Combine(homeDirectory, "Downloads", objectKey);
+        var downloadPath = @"C:\temp";
 
         using (var response = await _s3Client.GetObjectAsync(getObjectRequest))
         using (var fileStream = File.Create(downloadPath))
