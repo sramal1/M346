@@ -1,7 +1,7 @@
 # Test Dokumentation Gruppe 1
 
 ## Test 1
-| Bieldgroesse           | Verkleinerungsgrad | Erwartete Bildgroesse |
+| Bildgroesse            | Verkleinerungsgrad | Erwartete Bildgroesse |
 |------------------------|--------------------|-----------------------|
 | 500p x 500p            | 50%                | 250p x 250p           |
 
@@ -20,7 +20,7 @@ Der Test hat das Bild wie erwartet auf 250p x 250p verkleinert.
 Duchgefuehrt am 21.12.2023 10:04
 
 ## Test 2
-| Bieldgroesse           | Verkleinerungsgrad | Erwartete Bildgroesse |
+| Bildgroesse            | Verkleinerungsgrad | Erwartete Bildgroesse |
 |------------------------|--------------------|-----------------------|
 | 427p x 640p            | 50%                | 213.5p x 320p         |
 
@@ -40,7 +40,7 @@ Durchgefuehrt am 21.12.2023 10:16
 
 
 ## Test 3
-| Bieldgroesse        | Verkleinerungsgrad | Erwartete Bildgroesse |
+| Bildgroesse         | Verkleinerungsgrad | Erwartete Bildgroesse |
 |---------------------|--------------------|-----------------------|
 | 500 x 500p          | 25%                | 125p x 125p           |
 
@@ -60,7 +60,7 @@ Durchgefuehrt am 21.12.2023 10:22
 
 
 ## Test 4
-| Bieldgroesse           | Verkleinerungsgrad | Erwartete Bildgroesse |
+| Bildgroesse            | Verkleinerungsgrad | Erwartete Bildgroesse |
 |------------------------|--------------------|-----------------------|
 | 640p x 478p            | 75%                | 480p x 358.5p         |
 
@@ -81,7 +81,7 @@ Durchgefuehrt am 21.12.2023 10:32
 
 
 ## Test 5
-| Bieldgroesse           | Verkleinerungsgrad | Erwartete Bildgroesse            |
+| Bildgroesse            | Verkleinerungsgrad | Erwartete Bildgroesse            |
 |------------------------|--------------------|----------------------------------|
 | 500p x 500p            | -50%               | Bild sollte nicht erkannt werden |
 
@@ -91,8 +91,7 @@ Durchgefuehrt am 21.12.2023 10:32
 ![hochgeladenes Bild von Test4](Pictures/Testing5/-50_Test1.png)
 
 ### zurueckkommendes Bild:
-
-![zurueckkommendes Bild von Test4](Pictures/Testing4/Testing4.jpg)
+-> Gab keines
 
 Resultat:
 Wie erwartet hat die Lambda ueberhaupt nichts gemacht, da das Bild nicht erkannt wurde.
