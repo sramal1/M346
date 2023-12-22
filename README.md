@@ -62,3 +62,4 @@ Für das nächste Projekt würde ich beibehalten, dass jeder einen festen Teilbe
 
 
 ### Leotrim Ramadani
+Das Projekt hat mir extrem viel Spaß gemacht, hat jedoch auch viele Nerven gekostet. Das Erstellen des Init-Scripts war äußerst mühsam, mit vielen Fehlern, die nicht sofort klar ersichtlich waren. Das Schlimmste war, wenn es keine Fehler gab, aber es trotzdem nicht richtig funktionierte. Ich habe zahlreiche Foren, Blogs und offizielle Dokumentationen durchsucht. Oft habe ich auch die KI genutzt, jedoch war es trotzdem nicht einfach. Dennoch hat es viel Spaß gemacht, und das Gefühl, wenn etwas endlich funktioniert hat, war extrem befriedigend. Ich hoffe, es gibt in der Zukunft mehr solcher Projekte.
