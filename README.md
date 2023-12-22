@@ -50,12 +50,15 @@ Ich habe in diesem Projekt nicht wirklich viel Code geschrieben, trotz allem vie
 
 
 ### Livio Dörig
+Bei dieser Projektarbeit war ich anfangs etwas überfordert. Ich konnte mir nicht genau vorstellen, wie das Projekt aufgebaut sein sollte und wie es genau funktionieren müsste. Im Projekt beschäftigte ich mich grösstenteils mit der Website, auf der man das Bild hochladen sollte. Diese konnten wir als Gruppe jedoch nicht so umsetzen, wie wir es geplant hatten. Ich denke, die Gründe dafür sind, dass so gut wie keiner von uns Erfahrung mit Node.js hatte und wir dementsprechend etwas zu wenig Zeit hatten, um dies zu lernen. Trotzdem konnte ich viel neues Wissen erlangen, auch im Zusammenhang mit AWS. Was ich am Projekt positiv fand, war, dass wir die Arbeit untereinander gut aufgeteilt haben, was dazu führte, dass wir effizient arbeiten konnten. 
+
 
 ### Manuel Bühler
 Zu Beginn des Projekts hatte ich Schwierigkeiten, mir genau vorzustellen, wie das Projekt funktionieren soll und wie es aufgebaut ist. Diese Herausforderung verbesserte sich jedoch im Verlauf des Projekts. Als die Aufgaben verteilt wurden, entschied ich mich für die Lambda-Funktion, da ich bereits mit C# vertraut bin. Auch hier fiel es mir anfangs schwer, einen guten Einstieg zu finden. Dieses Problem konnte ich jedoch durch die Verwendung des Amazon SDK für Visual Studio lösen, da damit direkt ein leeres Lambda-Projekt erstellt wurde. Das Entwickeln der Lambda-Funktion gestaltete sich dadurch eher wie das Schreiben eines Skripts.
 
-Bis jetzt (Stand Freitag, 17:00 Uhr) wurde das Probleme mit dem Setup  nicht gelöst, wodurch etwa die Hälfte des Projekts nicht funktionsfähig ist. Auch in anderen Bereichen, wie der Webseite, traten spät erkannte Probleme auf. Mit einer besseren Planung und einer früheren provisorischen Fertigstellung hätten diese wahrscheinlich behoben werden können.
+Bis jetzt (Stand Freitag, 17:00 Uhr) wurde das Probleme mit dem Setup nicht gelöst, wodurch etwa die Hälfte des Projekts nicht funktionsfähig ist. Auch in anderen Bereichen, wie der Webseite, traten spät erkannte Probleme auf. Mit einer besseren Planung und einer früheren provisorischen Fertigstellung hätten diese wahrscheinlich behoben werden können.
 
 Für das nächste Projekt würde ich beibehalten, dass jeder einen festen Teilbereich hat, für den er verantwortlich ist. Allerdings sollten alle Teile etwa drei Tage vor dem Projektende fertig sein, um ausführliche Tests durchzuführen und Probleme frühzeitig zu erkennen und zu beheben.
+
 
 ### Leotrim Ramadani
