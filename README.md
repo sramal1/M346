@@ -10,6 +10,7 @@
 	3. ./initialization.sh
 
 -> Die Buckets sollten jetzt erstellt worden sein, und die Lambda-Funktion sollte im ersten Bucket hochgeladen worden sein.
+
 5. Bleiben Sie im gleichen Verzeichnis und geben Sie folgenden Befehl ein:
 	1. ./PictureUpload.sh
 
