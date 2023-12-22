@@ -1,9 +1,3 @@
-// Cloud Projekt Arbeit
-// Gruppe: Livio, Manuel, Raphael, Leotrim
-// Author: Manuel Bühler
-
-// Lambda-Funktion
-
 using Amazon.Lambda.Core;
 using Amazon.S3;
 using Amazon.S3.Model;
@@ -87,8 +81,7 @@ namespace image_resizer_lambda
             {
                 BucketName = BucketNameResized,
                 Key = objectKey,
-                InputStream = imgStream,
-                CannedACL = S3CannedACL.PublicRead
+                InputStream = imgStream
             };
 
             await _s3Client.PutObjectAsync(putObjectRequest);
