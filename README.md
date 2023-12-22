@@ -50,5 +50,10 @@ Ich habe in diesem Projekt nicht wirklich viel Code geschrieben, trotz allem vie
 ### Livio Dörig
 
 ### Manuel Bühler
+Zu Beginn des Projekts hatte ich Schwierigkeiten, mir genau vorzustellen, wie das Projekt funktionieren soll und wie es aufgebaut ist. Diese Herausforderung verbesserte sich jedoch im Verlauf des Projekts. Als die Aufgaben verteilt wurden, entschied ich mich für die Lambda-Funktion, da ich bereits mit C# vertraut bin. Auch hier fiel es mir anfangs schwer, einen guten Einstieg zu finden. Dieses Problem konnte ich jedoch durch die Verwendung des Amazon SDK für Visual Studio lösen, da damit direkt ein leeres Lambda-Projekt erstellt wurde. Das Entwickeln der Lambda-Funktion gestaltete sich dadurch eher wie das Schreiben eines Skripts.
+
+Bis jetzt (Stand Freitag, 17:00 Uhr) wurde das Probleme mit dem Setup  nicht gelöst, wodurch etwa die Hälfte des Projekts nicht funktionsfähig ist. Auch in anderen Bereichen, wie der Webseite, traten spät erkannte Probleme auf. Mit einer besseren Planung und einer früheren provisorischen Fertigstellung hätten diese wahrscheinlich behoben werden können.
+
+Für das nächste Projekt würde ich beibehalten, dass jeder einen festen Teilbereich hat, für den er verantwortlich ist. Allerdings sollten alle Teile etwa drei Tage vor dem Projektende fertig sein, um ausführliche Tests durchzuführen und Probleme frühzeitig zu erkennen und zu beheben.
 
 ### Leotrim Ramadani
