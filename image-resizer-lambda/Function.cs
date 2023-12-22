@@ -1,5 +1,6 @@
 // Cloud Projekt Arbeit
 // Gruppe: Livio, Manuel, Raphael, Leotrim
+// Author: Manuel Bühler
 
 // Lambda-Funktion
 
