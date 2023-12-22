@@ -12,6 +12,7 @@
 5. Wechseln Sie auf AWS und klicken Sie auf den 'original-image-bucket-m346'. Laden Sie ein Foto ihrer Wahl hoch.
 
 -> Die Dateienbezeichnung ist wichtig, anonsten erkennt die Lambda die Datei nicht. Der Dateiname sollte folgendermasen aufgebaut sein: 'Verkleinerungsgrad_Dateiname.Dateiendung'. Bspw '50_Testing1.png'
+
 6. Wechseln Sie auf AWS zu Ihrem zweiten Bucket mit dem Namen 'resize-image-bucket-m346'. Dort sollte nach kurzer Zeit schon Ihr verkleinertes Bild abgelegt auftauchen.
 
 
