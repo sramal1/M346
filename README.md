@@ -33,7 +33,7 @@
 | Lambda-Funktion schreiben | Dokumentation & Testing | Website erstellen     | Scripts schreiben   |
 
 ## Tests
-Unsere Tests sind in einem eigenen Dokument beschrieben. Dies liegt unter folgendem Pfad ['Testing/Test_Dokumenation_M364_Gruppe1.md']('\Testing\Test_Dokumenation_M364_Gruppe1.md')
+Unsere Tests sind in einem eigenen Dokument beschrieben. Dies liegt unter folgendem Pfad ['Testing/Test_Dokumenation_M364_Gruppe1.md'](Testing/Test_Dokumenation_M364_Gruppe1.md)
 
 ## Reflexion
 
