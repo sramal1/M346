@@ -99,4 +99,9 @@ Wie erwartet hat die Lambda ueberhaupt nichts gemacht, da das Bild nicht erkannt
 Durchgefuehrt am 22.12.2023 17:57
 
 
+
+## Allgemein
+Wir sind insgesamt zufrieden mit der Lambda-Funktion, haben jedoch festgestellt, dass sie manchmal etwas ungenau ist. Zudem waere eine moegliche Optimierung, dass sie beispielsweise ein vorangestelltes Minus ('-') entfernt und stattdessen mit der Zahl 50 arbeitet, wie im Testfall 5.
+
+
 **Tests wurden alle von der Gruppe1 durchgefuehrt.**
