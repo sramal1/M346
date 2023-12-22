@@ -21,6 +21,7 @@
 
 6. Wechseln Sie auf AWS zu Ihrem zweiten Bucket mit dem Namen 'resize-image-bucket-m346'. Dort sollte nach kurzer Zeit schon Ihr verkleinertes Bild abgelegt auftauchen.
 7. Klicken Sie auf herunterladen und Ihr Bild sollte verkleinert sein.
+-> Schauen Sie bevor Sie herunterladen klicken, in Ihr Temp-Verzeichnis, gelegentlich wird dort das File automatisch abgelegt.
 
 
 ### gewuenschter Ablauf
@@ -31,7 +32,7 @@
 5. Bild sollte automatisch verkleinert heruntergeladen werden.
 
 #### Warum es nicht zu stande gekommen ist
-1. Die Website ist nicht zustande gekommen, da wir das Bild nicht von der Website auf den ersten Bucket laden konnten, dadurch konnten wir die gewuenschten Schritte 3 - 5 nicht umsetzten koennen. Wir wollten dann als Austausch von der Website, ein Script erstellen, bei welchem der Benutzer den Pfad zu der Datei in die Console eingeben muss und das Script dieses File dann auf den ersten Bucket hochlaedt. Dies hat aber nicht wie gewuenscht funktioniert und wir haben auch diese Idee sein lassen.
+1. Die Website ist nicht zustande gekommen, da wir das Bild nicht von der Website auf den ersten Bucket laden konnten, dadurch konnten wir die gewuenschten Schritte 3 - 5 nicht umsetzten koennen. Wir haben nun als Ersatz, ein Script geschrieben, welches den Dateipfad als Eingabe, entgegennimmt und dann das File auf den Bucket hochlaedt.
 
 
 ## Aufgabenverteilung
