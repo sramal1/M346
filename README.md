@@ -8,6 +8,7 @@
 	1. sudo apt install dos2unix
 	2. dos2unix initialization.sh
 	3. ./initialization.sh
+
 -> Die Buckets sollten jetzt erstellt worden sein, und die Lambda-Funktion sollte im ersten Bucket hochgeladen worden sein.
 5. Bleiben Sie im gleichen Verzeichnis und geben Sie folgenden Befehl ein:
 	1. ./PictureUpload.sh
@@ -18,6 +19,7 @@
 -> Diese Script sollte Ihnen Ihr gewuenschtes Foto auf den ersten Bucket hochladen
 
 6. Wechseln Sie auf AWS zu Ihrem zweiten Bucket mit dem Namen 'resize-image-bucket-m346'. Dort sollte nach kurzer Zeit schon Ihr verkleinertes Bild abgelegt auftauchen.
+7. Klicken Sie auf herunterladen und Ihr Bild sollte verkleinert sein.
 
 
 ### gewuenschter Ablauf
