@@ -43,7 +43,7 @@ Wichtig: Fuer diese Befehle benoetigen Sie aws, Amazon.Lambda.Tools und dot net 
 
 #### Warum es nicht zu stande gekommen ist
 1. Die Website ist nicht zustande gekommen, da wir das Bild nicht von der Website auf den ersten Bucket laden konnten.
-2. Die Scripts sind nicht zu stande gekommen, da Sie die Lambda-Funktion nicht richtig hochgeladen haben, sprich hat sie nicht mehr funktioniert. Jedoch haben die Scripts die Buckets erstellt, was jedoch keinen grossen mehr Wert dann gehabt hat.
+2. Die Scripts sind nicht zu stande gekommen, da Sie die Lambda-Funktion nicht richtig hochgeladen haben, sprich hat sie nicht mehr funktioniert. Allerdings hat das Script die Buckets erstellt.
 
 
 ## Aufgabenverteilung
