@@ -9,9 +9,13 @@
 	2. dos2unix initialization.sh
 	3. ./initialization.sh
 -> Die Buckets sollten jetzt erstellt worden sein, und die Lambda-Funktion sollte im ersten Bucket hochgeladen worden sein.
-5. Wechseln Sie auf AWS und klicken Sie auf den 'original-image-bucket-m346'. Laden Sie ein Foto ihrer Wahl hoch.
+5. Bleiben Sie im gleichen Verzeichnis und geben Sie folgenden Befehl ein:
+	1. ./PictureUpload.sh
 
+-> Geben Sie bitte den vollen Pfad ein
 -> Die Dateienbezeichnung ist wichtig, anonsten erkennt die Lambda die Datei nicht. Der Dateiname sollte folgendermasen aufgebaut sein: 'Verkleinerungsgrad_Dateiname.Dateiendung'. Bspw '50_Testing1.png'
+
+-> Diese Script sollte Ihnen Ihr gewuenschtes Foto auf den ersten Bucket hochladen
 
 6. Wechseln Sie auf AWS zu Ihrem zweiten Bucket mit dem Namen 'resize-image-bucket-m346'. Dort sollte nach kurzer Zeit schon Ihr verkleinertes Bild abgelegt auftauchen.
 
@@ -24,13 +28,13 @@
 5. Bild sollte automatisch verkleinert heruntergeladen werden.
 
 #### Warum es nicht zu stande gekommen ist
-1. Die Website ist nicht zustande gekommen, da wir das Bild nicht von der Website auf den ersten Bucket laden konnten, dadurch konnten wir die gewuenschten Schritte 3 - 5 nicht umsetzten koennen.
+1. Die Website ist nicht zustande gekommen, da wir das Bild nicht von der Website auf den ersten Bucket laden konnten, dadurch konnten wir die gewuenschten Schritte 3 - 5 nicht umsetzten koennen. Wir wollten dann als Austausch von der Website, ein Script erstellen, bei welchem der Benutzer den Pfad zu der Datei in die Console eingeben muss und das Script dieses File dann auf den ersten Bucket hochlaedt. Dies hat aber nicht wie gewuenscht funktioniert und wir haben auch diese Idee sein lassen.
 
 
 ## Aufgabenverteilung
-| Manuel                    | Raphael                 | Livio                 | Leotrim             |
-|---------------------------|-------------------------|-----------------------|---------------------|
-| Lambda-Funktion schreiben | Dokumentation & Testing | Website erstellen     | Scripts schreiben   |
+| Manuel                    | Raphael                                       | Livio                 | Leotrim             |
+|---------------------------|-----------------------------------------------|-----------------------|---------------------|
+| Lambda-Funktion schreiben | Dokumentation & Testing (kleiner Anpassungen) | Website erstellen     | Scripts schreiben   |
 
 ## Tests
 Unsere Tests sind in einem eigenen Dokument beschrieben. Dies liegt unter folgendem Pfad ['Testing/Test_Dokumenation_M364_Gruppe1.md'](Testing/Test_Dokumenation_M364_Gruppe1.md)
