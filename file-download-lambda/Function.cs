@@ -1,3 +1,9 @@
+// Cloud Projekt Arbeit
+// Gruppe: Livio, Manuel, Raphael, Leotrim
+// Author: Manuel Bühler
+
+// Lambda-Funktion
+
 using Amazon.Lambda.Core;
 using Amazon.S3;
 using Amazon.S3.Model;
@@ -75,8 +81,9 @@ public class Function
         };
 
 
-        //var downloadPath = Path.Combine(homeDirectory, "Downloads", objectKey);
-        var downloadPath = @"C:\temp";
+        var downloadPath = Path.Combine(homeDirectory, "Downloads", objectKey);
+        // For tesing on Windows use this:
+        //var downloadPath = @"C:\temp";
 
         using (var response = await _s3Client.GetObjectAsync(getObjectRequest))
         using (var fileStream = File.Create(downloadPath))

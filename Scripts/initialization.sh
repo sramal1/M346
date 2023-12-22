@@ -42,7 +42,7 @@ aws lambda add-permission --function-name $functionName --profile default \
  --source-account $ARN
 
 
-aws s3api put-bucket-notification-configuration --bucket $bucketName1 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionNameDownload'","Events": ["s3:ObjectCreated:Put"]}]}'
+aws s3api put-bucket-notification-configuration --bucket $bucketName1 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionName'","Events": ["s3:ObjectCreated:Put"]}]}'
 
 cd ../file-download-lambda
 
@@ -54,11 +54,11 @@ aws lambda add-permission --function-name $functionNameDownload --profile defaul
  --statement-id AllowToBeInvoked \
  --action "lambda:InvokeFunction" \
  --principal s3.amazonaws.com \
- --source-arn "arn:aws:s3:::resize-image-bucket-m346 \
+ --source-arn "arn:aws:s3:::resize-image-bucket-m346" \
  --source-account $ARN
 
 
-aws s3api put-bucket-notification-configuration --bucket $bucketName2 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionName'","Events": ["s3:ObjectCreated:Put"]}]}'
+aws s3api put-bucket-notification-configuration --bucket $bucketName2 --notification-configuration '{"LambdaFunctionConfigurations": [{"LambdaFunctionArn": "arn:aws:lambda:us-east-1:'$ARN':function:'$functionNameDownload'","Events": ["s3:ObjectCreated:Put"]}]}'
 
 #cd ../NodeWebsite
 
