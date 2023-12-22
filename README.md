@@ -21,7 +21,7 @@
 
 6. Wechseln Sie auf AWS zu Ihrem zweiten Bucket mit dem Namen 'resize-image-bucket-m346'. Dort sollte nach kurzer Zeit schon Ihr verkleinertes Bild abgelegt auftauchen.
 7. Klicken Sie auf herunterladen und Ihr Bild sollte verkleinert sein.
--> Schauen Sie bevor Sie herunterladen klicken, in Ihr Temp-Verzeichnis, gelegentlich wird dort das File automatisch abgelegt.
+-> Schauen Sie bevor Sie herunterladen klicken, in Ihr Temp-Verzeichnis, je nach Konfiguraion Ihrer VM, kann das File dort abgelegt worden sein.
 
 
 ### gewuenschter Ablauf
