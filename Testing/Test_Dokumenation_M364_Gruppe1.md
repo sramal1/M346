@@ -80,4 +80,24 @@ Durchgefuehrt am 21.12.2023 10:32
 
 
 
+## Test 5
+| Bieldgroesse           | Verkleinerungsgrad | Erwartete Bildgroesse            |
+|------------------------|--------------------|----------------------------------|
+| 500p x 500p            | -50%               | Bild sollte nicht erkannt werden |
+
+
+### hochgeladenes Bild:
+
+![hochgeladenes Bild von Test4](Pictures/Testing5/-50_Test1.png)
+
+### zurueckkommendes Bild:
+
+![zurueckkommendes Bild von Test4](Pictures/Testing4/Testing4.jpg)
+
+Resultat:
+Wie erwartet hat die Lambda ueberhaupt nichts gemacht, da das Bild nicht erkannt wurde.
+
+Durchgefuehrt am 22.12.2023 17:57
+
+
 **Tests wurden alle von der Gruppe1 durchgefuehrt.**
