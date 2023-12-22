@@ -55,6 +55,8 @@ Wichtig: Fuer diese Befehle benoetigen Sie aws, Amazon.Lambda.Tools und dot net 
 ## Reflexion
 
 ### Raphael Hilti
+Ich habe in diesem Projekt nicht wirklich viel Code geschrieben, trotz allem viel gelernt. Ich habe viel besser verstanden, wie die virtuelle Maschine mit AWS interagiert und wie solche Skripte, beispielsweise fuer das Erstellen von Buckets, aussehen. Zusammengefasst von meinen Neugelernten, kann ich sagen, dass ich mich einfach besser in AWS und rund um die Cloud auskenne. Negative Erfahrungen habe ich mit diesem Projekt nicht wirklich gemacht, ich habe bloss gemerkt, wie empfindlich AWS ist und dass ein kleiner Fehler schon dazu fuehrt, dass nichts funktioniert. Ausserdem ist es auch sehr muehsam, die Umgebung aufzusetzen.
+
 
 ### Livio Dörig
 
